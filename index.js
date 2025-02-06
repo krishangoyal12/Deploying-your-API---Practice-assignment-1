@@ -22,6 +22,11 @@ app.get('/', (req, res) => {
   res.sendFile(resolve(__dirname, 'pages/index.html'));
 });
 
+app.get('/env', (req, res) => {
+  res.send(config);
+});
+
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
